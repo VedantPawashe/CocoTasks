@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Get User Location</h2>
+    <!-- <button onclick="loc()">Get Location</button> -->
+    <p id="hell"></p>
+    <!-- <button onclick="loc()">Open in OpenStreetMap</button> -->
+
+    <script>
+        navigator.geolocation.getCurrentPosition(loc);
+
+        function loc(pos){
+            const lat = pos.coords.latitude;
+            const lon = pos.coords.longitude;
+            document.getElementById('hell').innerText = `Latitude: ${lat} \n Longitude: ${lon}`;
+
+        
+        }
+
+    </script>
+</body>
+</html>
