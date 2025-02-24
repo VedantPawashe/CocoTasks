@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+<body>
+
+    <h2>Save and Retrieve Content</h2>
+    <textarea id="content" placeholder="Type something..."></textarea>
+    <button onclick="saveContent()">Save</button>
+    <button onclick="loadContent()">Load</button>
+    <button onclick="clearContent()">Clear</button>
+
+    <script>
+        function saveContent() {
+            let text = document.getElementById("content").value;
+            localStorage.setItem("savedText ", text);
+            alert("Content saved!");
+        }
+
+        function loadContent() {
+            let text = localStorage.getItem("savedText");
+            if (text) {
+                document.getElementById("content").value = text;
+            } else {
+                alert("No saved content found.");
+            }
+        }
+
+        function clearContent() {
+            localStorage.removeItem("savedText");
+            document.getElementById("content").value = "";
+            alert("Content cleared!");
+        }
+    </script>
+
+</body>
+</html>
