@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+    <svg width="200" height="100">
+        <rect width="100" height="50" x="10" y="10" fill="yellow"/>
+    </svg>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6_1p9FZSSUs?si=hpiZY6cbgyctXzpq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </svg>
+    <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <object data="https://cocotechoes.com/" type="a" width="600" height="500">
+        <p>Welcome to CocoTechoes <a href="https://cocotechoes.com/">Wanna pay a visit to our website?</a></p>
+    </object>
+
+    <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "lightgreen";
+    ctx.fillRect(50, 25, 100, 50);
+    </script>
+
+</body>
+</html>
